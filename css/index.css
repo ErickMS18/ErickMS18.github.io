@@ -1,0 +1,240 @@
+body {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Evita o scroll horizontal */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #fff; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
+    z-index: 1000; /* Garante que o cabeçalho esteja acima dos outros elementos */
+}
+
+nav {
+    padding: 10px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+li {
+    display: inline;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: transparent; 
+    transition: background-color 0.3s ease;
+}
+
+ul li:first-child a {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border: 1px solid #000;
+}
+
+ul li:nth-child(2) a {
+    border: 1px solid #000;
+}
+
+ul li:last-child a {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: 1px solid #000;
+}
+
+a:hover {
+    background-color: #ddd;
+}
+
+.sound-button {
+    display: flex;
+    align-items: center; 
+    padding: 80px;
+}
+
+#sound-button {
+    background: none; 
+    border: none; 
+    cursor: pointer; 
+    font-size: 24px; 
+    color: #000000; 
+}
+
+#three-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ocupa 100% da altura da janela */
+    z-index: 0; /* Garante que os cubos fiquem no fundo */
+}
+
+canvas { 
+    display: block; 
+}
+
+.question-container {
+    position: relative; 
+    margin-top: -15vh; /* Reduzido mais uma vez pela metade */
+    text-align: center;
+    font-size: 3em;
+    color: black;
+    z-index: 1; /* Pergunta acima dos cubos */
+}
+
+.question {
+    font-size: 1.5em;
+    color: #000; 
+    margin: 0; 
+}
+
+.descricao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Garante que o conteúdo esteja alinhado verticalmente */
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 900px;
+    z-index: 1;
+}
+
+.texto {
+    width: 45%; /* O texto ocupa 45% da largura */
+    text-align: left;
+}
+.texto h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.texto p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+.foto {
+    width: 45%; /* A imagem ocupa 45% da largura */
+    text-align: right;
+}
+
+.foto img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.card-container {
+    display: flex; /* Exibe os cards em linha */
+    transition: transform 0.2s; /* Suaviza o movimento */
+    white-space: nowrap; /* Impede quebra de linha */
+}
+
+.card-container a {
+    display: block; /* Faz o link ocupar toda a área do card */
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+.card {
+    width: 350px; /* Largura do card */
+    height: 450px; /* Altura do card */
+    background-color: #a1ff27; /* Cor de fundo fallback */
+    background-size: cover; /* Ajusta a imagem para cobrir o card */
+    margin: 0 20px; /* Espaçamento entre os cards */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px; /* Tamanho da fonte */
+    color: rgb(0, 0, 0); /* Cor do texto */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra do card */
+    transition: none; /* Remove transições ao passar o mouse */
+}
+
+.card:hover {
+    background-color: #a1ff27; /* Mantém a cor original ao passar o mouse */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Pode adicionar uma sombra maior se desejar */
+}
+
+
+.content-bottom {
+    background-color: black;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-area {
+    width: 100%;
+    height: 350px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    color: white;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.footer-name {
+    font-size: 72px; 
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    margin: 0;
+    text-align: right;
+}
+
+.github-link {
+    font-size: 42px;
+    position: absolute;
+    left: 10px; 
+    top: 10px;
+    text-decoration: none;
+    color: white;
+    border: none; 
+    outline: none; 
+}
+
+.github-link:hover,
+.github-link:focus {
+    text-decoration: underline;
+    outline: none; 
+    border: none; 
+}
+
+
