@@ -103,3 +103,20 @@ window.addEventListener('scroll', () => {
     cardContainer.style.transform = `translateX(${scrollPosition}px)`;
 });
 
+let currentIndex = 0;
+const images = document.querySelectorAll('.foto img');
+const totalImages = images.length;
+
+function showNextImage() {
+    images[currentIndex].classList.remove('active'); // Remove a classe 'active' da imagem atual
+    currentIndex = (currentIndex + 1) % totalImages; // Avança para a próxima imagem, e volta ao início se estiver no fim
+    images[currentIndex].classList.add('active'); // Adiciona a classe 'active' à nova imagem
+}
+
+// Mostra a primeira imagem ao carregar a página
+images[currentIndex].classList.add('active');
+
+// Troca de imagem a cada 3 segundos (3000 milissegundos)
+setInterval(showNextImage, 3000);
+
+

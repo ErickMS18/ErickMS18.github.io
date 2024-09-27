@@ -1,0 +1,269 @@
+
+.header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #fff; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
+    z-index: 1000; /* Garante que o cabeçalho esteja acima dos outros elementos */
+}
+
+
+.video-background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Faz o vídeo ficar atrás do conteúdo */
+    transform: translate(-50%, -50%);
+}
+
+nav {
+    padding: 10px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+li {
+    display: inline;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: transparent; 
+    transition: background-color 0.3s ease;
+}
+
+ul li:first-child a {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border: 1px solid #000;
+}
+
+ul li:nth-child(2) a {
+    border: 1px solid #000;
+}
+
+ul li:last-child a {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: 1px solid #000;
+}
+
+a:hover {
+    background-color: #ddd;
+}
+
+.sound-button {
+    display: flex;
+    align-items: center; 
+    padding: 80px;
+}
+#sound-button {
+    background: none; 
+    border: none; 
+    cursor: pointer; 
+    font-size: 24px; 
+    color: #000000; 
+}
+
+#three-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ocupa 100% da altura da janela */
+    z-index: 0; /* Garante que os cubos fiquem no fundo */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+    position: relative;
+}
+
+.main-circle {
+    width: 350px; 
+    height: 350px; 
+    background: rgba(255, 255, 255, 0.5); /* Gradiente transparente */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+    z-index: 1; /* Faz o círculo principal aparecer acima do vídeo */
+}
+
+.main-circle:hover {
+    transform: translate(-50%, -50%) scale(1.05); /* Aumenta ligeiramente no hover */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4); /* Aumenta a sombra no hover */
+}
+
+.main-circle:active {
+    transform: translate(-50%, -50%) scale(0.95); /* Efeito de pressão no clique */
+}
+
+
+.small-circle {
+    width: 250px; 
+    height: 250px; 
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    /* Remova ou comente a linha abaixo */
+    /* border: 1px solid; */
+    transform: scale(0); 
+    opacity: 0; 
+    transition: transform 0.3s ease, opacity 0.3s ease; 
+}
+
+.small-circle .inner-circle {
+    width: 80%; 
+    height: 80%; 
+    border-radius: 50%;
+    background-color: #ffffff; /* Cor do círculo interno */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-size: 18px; /* Tamanho do texto */
+}
+
+.circle1 .inner-circle {
+    background-image: url('../media/capa monitoria.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.circle2 .inner-circle {
+    background-image: url('../media/capa mapple.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.circle3 .inner-circle {
+    background-image: url('../media/capa PE.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.circle4 .inner-circle {
+    background-image: url('../media/capa OD.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.circle5 .inner-circle {
+    background-image: url('caminho/para/sua-imagem5.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Posições dos círculos menores mais próximos do centro */
+.circle1 { background-color: #e67e22; top: 30%; left: 40%; }
+.circle2 { background-color: #c0392b; top: 50%; left: 60%; }
+.circle3 { background-color: #f1c40f; top: 20%; left: 15%; }
+.circle4 { background-color: #9b59b6; top: 35%; left: 75%; }
+.circle5 { background-color: #78e7b4;top: 50%; left: 25%; }
+
+/* Estilo do modal */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px; /* Aumentando o padding */
+    border-radius: 10px; /* Suavizando os cantos */
+    display: flex;
+    max-width: 80%; /* Permitindo mais espaço horizontal */
+    max-height: 80%; /* Permitindo mais espaço vertical */
+    align-items: center;
+    position: relative; 
+}
+
+.modal img {
+    width: 60%;  /* Aumentando o tamanho da imagem */
+    height: 60%; /* Correspondente ao aumento de largura */
+    border-radius: 5px;
+    margin-right: 20px; 
+}
+
+.modal-text {
+    flex: 1;
+    font-size: 18px; /* Aumentando o tamanho do texto */
+}
+
+
+
+.close {
+    cursor: pointer;
+    color: red;
+    font-size: 24px; /* Aumentando o tamanho do ícone de fechar */
+    position: absolute; 
+    top: 10px; 
+    right: 10px; 
+}
+
+
+/* Efeito hover nos círculos */
+    .small-circle:hover {
+        transform: scale(1.2);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .small-circle:hover .inner-circle {
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+    }
+
+    .circle-image {
+        width: 80%; /* Ajuste conforme necessário para a aparência */
+        height: auto; /* Mantém a proporção da imagem */
+        display: block; /* Remove o espaço em branco abaixo da imagem */
+        border-radius: 50%; /* Faz a imagem ter bordas arredondadas */
+        object-fit: cover; /* Garante que a imagem cubra completamente o círculo */
+    }
+    
+    

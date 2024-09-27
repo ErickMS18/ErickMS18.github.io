@@ -3,17 +3,23 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="../css/index.css">
+        <link rel="stylesheet" type="text/css" href="../css/portfolio.css">
         <link rel="stylesheet" href="../css/font-awesome/fontawesome-free-web/css/all.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js" defer></script>
-        <script src="../js/index.js" defer></script>
+        <script src="../js/portfolio.js" defer></script>
         <title>Erick Maestri de Souza</title>
     </head>
     <body>
+
+        <video autoplay muted loop class="video-background">
+            <source src="../media/Japan street live wallpaper.mp4" type="video/mp4">
+        </video>
+
         <div class="header">
             <nav>
                 <ul>
-                    <li><a href="../home.html">Home</a></li>
+                    <li><a href="../index.html">Home</a></li>
                     <li><a href="portfolio.html">Portfólio</a></li>
                     <li><a href="creations.html">Creations</a></li>
                 </ul>
@@ -26,6 +32,110 @@
                 <audio id="sound" src="../media/myeyes.mp3" type="audio/mp3" loop></audio>
             </div>
         </div>
+        
+        <div class="main-circle" id="mainCircle">
+            <img src="../media/xinim.png" alt="Portfolio" class="circle-image">
+        </div>
+        
+    
+    <!-- Círculos menores -->
+    <div class="small-circle circle1" onclick="openModal(1)">
+        <div class="inner-circle"></div>
+    </div>
+    <div class="small-circle circle2" onclick="openModal(2)">
+        <div class="inner-circle"></div>
+    </div>
+    <div class="small-circle circle3" onclick="openModal(3)">
+        <div class="inner-circle"></div>
+    </div>
+    <div class="small-circle circle4" onclick="openModal(4)">
+        <div class="inner-circle">4</div>
+    </div>
+    <div class="small-circle circle5" onclick="openModal(5)">
+        <div class="inner-circle">5</div>
+    </div>
+
+    <!-- Modais -->
+    <!-- Modal 1 -->
+<div class="modal" id="modal1">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal(1)">&times;</span>
+        <img id="modal-image1" src="../media/capa monitoria.jpg" alt="Imagem 1">
+        <div class="modal-text">
+            <h2>Monitoria de Matemática</h2>
+            <p>No ano passado, enquanto cursava o terceirão no Colégio Consul Carlos Renaux, tive a oportunidade de participar de um projeto de monitorias oferecido pela escola. A coordenadora apresentou a proposta de realizar monitorias em diversas matérias para os alunos do primeiro ano do ensino médio, muitos dos quais vinham de colégios públicos e enfrentavam dificuldades em se adaptar ao ritmo das aulas. Sabendo que eu cursaria Ciência da Computação, me voluntariei para dar monitorias de matemática. </p>
+            <p> Formei dupla com minha amiga Gabriela, e juntos realizávamos as monitorias semanalmente, geralmente nas tardes de sexta-feira. Além das aulas regulares, em épocas de prova, também oferecíamos revisões pré-prova para ajudar os alunos a revisarem conteúdos específicos. O foco das monitorias era abordar tanto os tópicos principais que caíam nas provas quanto as dificuldades individuais dos alunos, que incluíam temas como funções, progressões aritméticas e geométricas (PA e PG), e relações métricas. </p>
+            <p> Tivemos como alunos Luan, Bernardo e Nagel, e a experiência foi extremamente gratificante. A monitoria não apenas me proporcionou a chance de solidificar meu conhecimento em matemática, mas também me deu a oportunidade de fazer grandes amigos ao longo do caminho. Sou muito grato por essa experiência, que reforçou minha habilidade de ensinar e de lidar com diferentes dificuldades de aprendizado.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 2 -->
+<div class="modal" id="modal2">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal(2)">&times;</span>
+        <img id="modal-image2" src="../media/capa mapple.jpg" alt="Imagem 2">
+        <div class="modal-text">
+            <h2>Intercâmbio no Canadá</h2>
+            <p>No segundo ano do meu ensino médio, em 2022, realizei um intercâmbio de high school para Ottawa, Canadá. Passei cerca de 5 meses estudando na escola Lester B. Pearson, uma experiência extremamente enriquecedora que encarei sem medo. Esse período foi um verdadeiro catalisador para meu inglês, especialmente na comunicação verbal. Durante a minha estadia, tive contato com duas famílias, uma de origem haitiana, e outra de origem franco canadense, e mantenho contato com meus hosts e amigos até hoje. </p>
+
+            <p>Além dos aprendizados acadêmicos, tive a oportunidade de fazer amigos de diversas partes do mundo, como a Izzy no Canadá, Matilde em Portugal, Lennart na Alemanha e Daisuke do Japão. Fiquei muito feliz com isso, pois fortaleceu ainda mais a riqueza social e cultural dessa experiência. </p>
+                
+            <p>Concluí o intercâmbio com boas notas, recebendo A em Healthy Living and Personal Fitness Activities e A+ em English as a Second Language Level 3, World Religions and Belief Traditions in Daily Life e Introduction to Anthropology, Psychology and Sociology. Além disso, tive a oportunidade de vivenciar momentos culturais significativos, como um Halloween típico canadense e um Natal com a minha host family, cercado pela neve. Fiquei muito contente quando minha professora de Healthy Living me convidou para celebrar o Dia de Ação de Graças com sua família, experiências que realmente enriqueceram minha jornada e que guardo com carinho até hoje.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 3 -->
+<div class="modal" id="modal3">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal(3)">&times;</span>
+        <img id="modal-image3" src="../media/capa PE.jpg" alt="Imagem 3">
+        <div class="modal-text">
+            <h2>Pet South America</h2>
+            <p>Além de veterinário, meu pai também é um empresário visionário. Ele fundou a Atacama, uma empresa pioenira em maquinas de secar animais no Brasil. Aos 16 anos, tive a primeira oportunidade de participar da Pet South America, uma das maiores feiras do setor pet na América Latina, realizada anualmente em São Paulo durante o mês de agosto. Desde então, tenho participado dessa experiência intensa e desafiadora, que reúne o melhor do mercado pet por três dias seguidos.</p>
+            <p>A Pet South não é apenas uma feira; é um verdadeiro teste de resistência e trabalho em equipe. Nos dias que antecedem o evento, passamos por um treinamento detalhado, onde nos aprofundamos nos produtos da Atacama, compreendendo suas especificidades, benefícios e vantagens em relação aos concorrentes. Dessa forma, somos preparados para o desafio de captar a atenção de potenciais clientes em meio ao movimento frenético dos corredores da feira.</p>
+            <p>Durante o evento, é na comunicação e no relacionamento interpessoal que a mágica acontece. Aprendi a identificar as necessidades dos visitantes e a mostrar como os nossos produtos se apresentam como soluções eficientes e inovadoras para problemas comuns que enfrentam no dia a dia. O entusiasmo e a energia de toda a equipe tornam a experiência ainda mais enriquecedora, e a cada ano, sinto que aprimoro minhas habilidades de comunicação e vendas.</p>
+            <p>Em 2024, participei pela terceira vez da Pet South e posso dizer com confiança que a feira se tornou um ponto marcante na minha trajetória profissional e pessoal. A união da equipe, a construção de relacionamentos com os clientes são recompensas que fazem todo o esforço valer a pena. O aprendizado que carrego de cada edição é inestimável, e espero continuar contribuindo para o crescimento da Atacama por muitos anos.      </p>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 4 -->
+<div class="modal" id="modal4">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal(4)">&times;</span>
+        <img id="modal-image4" src="../media/capa_outro_projeto.jpg" alt="Imagem 4">
+        <div class="modal-text">
+            <h2>Orange Adventures</h2>
+            <p>Orange Adventures acompanha a fuga de Marcel, um orangotango que estava preso em um zoológico, em sua jornada em direção à cidade. O jogo se desenrola em ambos ambientes, enquanto Marcel busca algo que permanece desconhecido para o jogador até o final. Somente aqueles que conseguirem superar os obstáculos e chegar ao fim da aventura descobrirão as verdadeiras intenções desse intrigante orangotango e o que realmente motiva sua fuga.</p>
+            <p>Particularmente, possuo um carinho especial por esse jogo, não apenas por ser o meu primeiro projeto na faculdade, mas também por ter sido o ponto de partida para amizades que levo comigo até hoje. Foi esse projeto que marcou o início do curso e a fase de adaptação a uma nova cidade. Eu havia acabado de me mudar de Brusque, SC, para Curitiba e, ainda tímido como calouro, me vi em um ambiente completamente novo.</p>
+            <p>Durante as aulas de Experiência Criativa, aquela timidez foi aos poucos se dissolvendo. À medida que trabalhávamos no projeto, fui me aproximando cada vez mais de colegas que se tornaram meus grandes amigos: Cecília, Teeny, Gustavo, Emily, Antônio e Julia. Acredito que tenhamos o poder de moldar nosso caminho, mas há certos momentos em que tudo se encaixa de forma tão natural que parece que já estava predestinado.</p>
+            <p>Quanto ao jogo, ele foi idealizado e produzido em apenas um mês. Nossa proposta era desenvolver um jogo utilizando a plataforma Construct 3, no qual fiquei responsável pela documentação e pela apresentação final do projeto.</p>
+            <p>Tivemos que lidar com prazos apertados então foi crucial termos organizado bem o nosso tempo, priorizando tarefas e trabalhando em sintonia com o grupo. Cada um assumiu uma responsabilidade diferente, e a gente se comunicava o tempo todo para garantir que tudo estava andando conforme o planejado. A gente discutia bastante também (no bom sentido!), trocando ideias, escutando as opiniões de todo mundo e ajustando as coisas até chegarmos no produto final.</p>
+            <p> <a href="https://drive.google.com/file/d/1Vy7SAfByO2CM7dAlKEaBQi5NKsg9TX_4/view?usp=sharing" target="_blank">Assista à gameplay da última fase do Orange Adventures!</a>
+            </p>
+
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal 5 -->
+<div class="modal" id="modal5">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal(5)">&times;</span>
+        <img id="modal-image5" src="../media/capa_outro_projeto.jpg" alt="Imagem 5">
+        <div class="modal-text">
+            <h2>Primeiros Passos no Mundo Profissional e Um Projeto de Impacto</h2>
+            <p>Quando tinha 13 anos, comecei a ajudar na recepção do hospital veterinário do meu pai. Na época, era responsável por recepcionar os pets que vinham para banho e tosa e registrar suas fichas no sistema. Com o tempo, assumi também o controle do fluxo de clientes, organizando a ordem de atendimento para que o veterinário pudesse trabalhar de forma eficiente. Por estar na linha de frente, tive a oportunidade de lidar com muitos clientes e de aprender, na prática, a postura e a conduta esperadas em um ambiente de trabalho profissional. Situações mais delicadas, como emergências que recebíamos no hospital, foram um verdadeiro desafio, pois era preciso ser ágil e preciso na comunicação, já que muitas vezes se tratava de questões de vida ou morte.</p>
+            <p>Durante 2022 e 2023, fui encarregado, junto com o gerente da recepção, de desenvolver um projeto único na minha trajetória: escrever entrevistas para uma rádio local, a Massa FM de Brusque. Foram mais de 50 roteiros produzidos, abordando curiosidades, cuidados ou dicas para tutores de pet, que foram gravados e ainda são transmitidos semanalmente na programação da rádio. Além de ser uma experiência desafiadora, esse trabalho me ensinou a importância de adaptar o conteúdo ao público e criar uma linguagem clara e acessível para quem está do outro lado, ouvindo.</p>
+            <p>Porém, um dos grandes desafios foi manter a inovação dos conteúdos. Chegou um ponto em que já havíamos coberto praticamente todos os tópicos possíveis, e, para não repetirmos, tivemos que pesquisar muito, buscar inspiração em novas fontes e reinventar nossas ideias para continuar criando material interessante e relevante. Eventualmente, quando sentimos que havíamos explorado o máximo, decidimos finalizar o projeto, mas a experiência e o impacto gerado pelo trabalho são algo que levo com muito orgulho.</p>
+        </div>
+    </div>
+</div>
 
     </body>
 </html>

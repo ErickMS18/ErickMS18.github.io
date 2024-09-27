@@ -1,31 +1,179 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="../css/index.css">
-        <link rel="stylesheet" href="../css/font-awesome/fontawesome-free-web/css/all.css">
-        <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js" defer></script>
-        <script src="../js/index.js" defer></script>
-        <title>Erick Maestri de Souza</title>
-    </head>
-    <body>
-        <div class="header">
-            <nav>
-                <ul>
-                    <li><a href="../home.html">Home</a></li>
-                    <li><a href="portfolio.html">Portfólio</a></li>
-                    <li><a href="creations.html">Creations</a></li>
-                </ul>
-            </nav>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/creations.css">
+    <link rel="stylesheet" href="../css/font-awesome/fontawesome-free-web/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js" defer></script>
+    <script src="../js/creations.js" defer></script>
+    <title>Erick Maestri de Souza</title>
+
+</head>
+
+<body>
+    <div class="header">
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="creations.html">Creations</a></li>
+            </ul>
+        </nav>
+
+        <div class="sound-button">
+            <button id="sound-button">
+                <i id="sound-icon" class="fa-solid fa-volume-high"></i>
+            </button>
+            <audio id="sound" src="../media/myeyes.mp3" type="audio/mp3" loop></audio>
+        </div>
+    </div>
+
+    <div id="three-container"></div> 
+
     
-            <div class="sound-button">
-                <button id="sound-button">
-                    <i id="sound-icon" class="fa-solid fa-volume-high"></i>
-                </button>
-                <audio id="sound" src="../media/myeyes.mp3" type="audio/mp3" loop></audio>
+    <div class="magazine-title">
+        <span class="letter l1">C</span>
+        <span class="letter l2">r</span>
+        <span class="letter l3">e</span>
+        <span class="letter l4">a</span>
+        <span class="letter l5">t</span>
+        <span class="letter l6">i</span>
+        <span class="letter l7">o</span>
+        <span class="letter l8">n</span>
+        <span class="letter l9">s</span>
+    </div>
+    
+    
+
+    <div class="card-container-creations">
+        <div class="card" onclick="flipCard(this)" data-title="Vou Embora Pra Bahia" data-image="caminho/para/sua/imagem1.jpg" data-description="O grupo aCREditar foi formado no final de uma festa, quando eu e meu amigo Renan estávamos conversando no chão da sala. Durante essa conversa, surgiu a ideia de escrever uma letra de música. Eu peguei um papel, Renan pegou seu violão e, a partir dessa ideia, compusemos nossa primeira música, 'Ligação'.<br><br>
+
+            Com o tempo, Clara se juntou a nós, e cada um de nós assumiu responsabilidades específicas que refletiam nossas habilidades. Renan se concentrou na parte musical, explorando arranjos e melodias, enquanto Clara trouxe seu talento nas artes visuais, contribuindo com a estética e a identidade visual do grupo. Eu, por minha vez, me dediquei à escrita das letras, enfrentando o desafio de transmitir emoções e histórias de maneira autêntica. Essa diversidade de habilidades e a interação contínua entre nós não apenas fortaleceram nosso som, mas também nos ajudaram a desenvolver habilidades de comunicação, trabalho em equipe e resolução de problemas.<br><br>
+        
+        Entre as canções que criamos, 'Vou Embora Pra Bahia' é a queridinha do grupo.">
+            <div class="card-inner">
+                <div class="card-front">
+                    <i class="fa-solid fa-guitar card-icon"></i> <!-- Adicione a classe aqui -->
+                </div>
+                <div class="card-back" onclick="showModal(event, this.closest('.card'))">
+                    <p class="card-title">aCREditar</p>
+                    <p>Clara, Renan e Eu fundamos a aCREditar, um espaço no qual a música se tornou a nossa linguagem. 
+                        Nada mais que um projeto entre amigos sonhadores,  que se tornou uma realidade. 
+
+                    </p>
+                    <a href="https://drive.google.com/file/d/12YhzBD44wBgkAuZjgrvczlQwH6K9pARe/view?usp=sharing" target="_blank" class="card-link">Ouça "Vou Embora Pra Bahia"</a>
+                    <p>
+                       Período: 2023 
+                    </p>
+                </div>
             </div>
         </div>
+        
+        
 
-    </body>
+        <div class="card" onclick="flipCard(this)" data-title="METAMORFOSE" data-description="'Metamorfose' é uma coletânea de meus poemas que refletem meu primeiro amor por um garoto,
+         uma experiência que moldou minha pessoa e meus valores. 
+        Essa história teve início em 2020, contudo, apenas recentemente ela teve seu fim. Ao longo dos anos, 
+        pude apreender com meus erros e acertos, e perceber que somos fruto de ações e consequências. Foi esse combustível que, junto da minha paixão, 
+        foram substância desses poemas. Cada um deles reflete alguma parte dessa jornada de amadurecimento, capturando a essência da minha transformação de forma nua e humana. <br><br>
+        Durante um bom tempo, me culpei pelo fim que nosso relacionamento teve, e acabei me fechando ao amor. 
+        Porém, eu tinha apenas 14 anos quando isso começou, e, com o passar dos anos, eu entendi que ao invés de me condenar, eu precisava me 
+        aceitar como um ser humano, como alguém que as vezes comete erros mesmo não querendo, mas que tem a capacidade de aprender e evoluir com eles. 
+        'Metamorfose' é o resultado desse processo de cura e aceitação." >
+            <div class="card-inner">
+                <div class="card-front">
+                    <i class="fa-solid fa-pencil card-icon"></i>
+                </div>
+                <div class="card-back" onclick="showModal(event, this.closest('.card'))">
+                    <p class="card-title">METAMORFOSE</p>
+                    <p>
+                        Metamorfose é uma coletânea de poemas que, ao longo de quatro anos, se uniram e ressignificaram em 2024, refletindo minha jornada emocional e crescimento pessoal. <br>
+                    </p>
+                    <a href="https://docs.google.com/document/d/1yjXFe_3aVxCMceOdNsCnllBShX8WNt-9/edit" target="_blank" class="card-link">Leia "Metamorfose"</a>
+                    <p>
+                        Período: 2024
+                    </p>
+                </div>
+            </div>
+        </div>    
+
+        <div class="card" onclick="flipCard(this)" data-title="Sonhos e Delírios" data-image="caminho/para/sua/imagem1.jpg" data-description="Em um ano marcado pela suspensão das atividades extraclasses devido à pandemia de Covid-19, apenas aqueles genuinamente comprometidos com o teatro se juntaram a este projeto significativo. Tive a honra de fazer parte desse grupo especial, o qual carrego no meu coração junto de todas as risadas, amizades e claro, o resultado do nosso trabalho em conjunto.<br><br>Desde pequeno, sempre sonhei em fazer teatro, mas não tive a oportunidade por questões pessoais. Quando surgiu a chance de participar desse projeto, mergulhei de cabeça, determinado a aproveitar ao máximo essa experiência. A peça se inspirava na vida e obra de Vincent van Gogh, utilizando sua trajetória como uma metáfora para as lutas e os sonhos que todo artista enfrenta.<br><br>Um dos principais desafios enfrentados por nós, como elenco, foi a adaptação ao formato online e as limitações impostas pela pandemia. Trabalhar em equipe em um cenário de distanciamento social exigiu resiliência, comunicação clara e um profundo comprometimento com o coletivo.<br><br>Como minha primeira experiência em uma peça de teatro, desenvolvi habilidades valiosas, como trabalho em equipe, empatia e adaptabilidade, que são essenciais no mundo artístico. O impacto gerado pelo projeto foi profundo, não apenas para mim, mas para todos os envolvidos. A peça proporcionou uma plataforma de expressão em um momento de incerteza, reacendendo a paixão pela arte e fortalecendo os laços entre os participantes. Aprendemos que, mesmo em tempos difíceis, a arte tem o poder de conectar e transformar, oferecendo esperança e reflexão em meio ao caos.">
+            <div class="card-inner">
+                <div class="card-front">
+                    <i class="fa-solid fa-masks-theater card-icon"></i>
+                </div>
+                <div class="card-back" onclick="showModal(event, this.closest('.card'))">
+                    <p class="card-title">Sonhos e Delírios</p>
+                    <p>"Sonhos e Delírios" foi uma peça teatral,inspirada na vida de Vincent Van Gogh, realizada durante a pandemia, 
+                        pelo grupo Atividade Independente.
+                    </p>
+                    <a href="https://drive.google.com/file/d/1sfxn5L1MZgwHEfMs7KDpgPxDy3iP1XBp/view?usp=sharing" target="_blank" class="card-link">Assista a "Sonhos e Delírios"</a>
+                    <p>
+                        Período: 2021
+                    </p>
+                </div>
+            </div>
+        </div>
+          
+
+        <div class="card" onclick="flipCard(this)" data-title="Meditação" data-image="caminho/para/sua/imagem1.jpg" data-description="Meu primeiro contato com o budismo foi através do livro 'Amor pelas coisas imperfeitas: Como aceitar a si mesmo num mundo em busca de perfeição', do monge Haemin Sunim. Essa obra despertou em mim uma nova perspectiva sobre a vida e a impermanência.<br><br>
+
+        Aprofundei minha jornada assistindo às reflexões da Monja Coen e de Leandro Karnal, e li o livro que ambos escreveram, 'O Inferno Somos Nós: Do ódio à cultura de paz'. Essa obra discute como o medo pode estar na origem da violência, e destaca como o conhecimento de si mesmo e do outro pode promover uma nova atitude na sociedade, menos agressiva e mais acolhedora.<br><br>
+        
+       Atualmente estou lendo 'As coisas que você só vê quando desacelera: Como manter a calma em um mundo frenético', que me incentiva a abandonar a rotina automática e a assumir ativamente o ritmo da minha vida.<br><br>
+        
+        Desde o primeiro semestre deste ano, venho realizando meditações semanais na PUC-PR, integrando essa prática no meu dia a dia. Os projetos de meditação dos quais participei exercitam técnicas de respiração e a empatia, oferecendo um espaço para que outras pessoas explorem a meditação como ferramenta de autoconhecimento.<br><br>
+        
+        Os desafios que enfrentei nessa jornada foram principalmente relacionados à disciplina e à adaptação da prática à minha rotina. Contudo, esses obstáculos me ajudaram a desenvolver habilidades como paciência e resiliência, refletindo-se em um aumento significativo na clareza mental e no meu bem-estar.">
+            <div class="card-inner">
+                <div class="card-front">
+                    <i class="fa-solid fa-sun card-icon"></i>
+                </div>
+                <div class="card-back" onclick="showModal(event, this.closest('.card'))">
+                    <p class="card-title">Meditação</p>
+                    <p>Encontrei propósito na meditação em 2020, buscando-a como meio de manter o foco na minha rotina e promover o autoconhecimento.</p>
+                    <p> Período: 2020 - presente </p>
+                </div>
+            </div>
+        </div>    
+
+        <div class="card" onclick="flipCard(this)" data-title="Próximos Projetos" data-image="caminho/para/sua/imagem1.jpg" data-description="Estou desenvolvendo diversas ideias que refletem minhas paixões e habilidades, sempre guiado pela convicção de que devemos perseguir o que acreditamos.<br><br> 
+        Um dos projetos é criar bijuterias artesanais com tampinhas de engradados de vidro, unindo sustentabilidade e criatividade para mostrar que o valor pode ser encontrado nas coisas simples.Além disso, há muito tempo quero dar uma nova forma de expressão aos meus escritos através da música, e estou estudando produção musical para concretizar essa visão.<br><br>  
+        Acredito que transformar ideias em realidade é um processo que exige dedicação e fé no próprio caminho. Por isso, também estou focado integralmente em me preparar para a Apple Developer Academy, acreditando que o esforço consistente sempre leva a grandes realizações.">
+            <div class="card-inner">
+                <div class="card-front">
+                    <i class="fa-solid fa-gears card-icon"></i>
+                </div>
+                <div class="card-back" onclick="showModal(event, this.closest('.card'))">
+                    <p class="card-title">Próximos Projetos</p>
+                    <p>Com o objetivo de continuar expandindo minhas habilidades criativas e técnicas, tenho várias ideias em desenvolvimento.</p>
+                    <a href="https://br.pinterest.com/jubileuuzumaki1801/bottle-cap-jewelry/" target="_blank" class="card-link">Veja o Álbum de inspirações</a>
+                    <p>Período: presente</p>
+                </div>
+            </div>
+        </div>    
+
+ 
+    <div class="modal" id="dynamic-modal">
+        <div class="modal-header">
+            <h2 id="modal-title"></h2>
+            <button class="close-button" onclick="closeModal()">X</button>
+        </div>
+        <img id="modal-image" src="" alt="Imagem da Criação" style="width: 100%; border-radius: 5px;">
+        <p id="modal-description"></p>
+    </div>
+    
+    <div class="modal-overlay" id="modal-overlay" onclick="closeModal()"></div>
+
+    <h1> The power is in your hands </h1>
+    
+</body>
 </html>
+
+
+
+    
+
+

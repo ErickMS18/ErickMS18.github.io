@@ -108,18 +108,19 @@ canvas {
 
 .descricao {
     display: flex;
+    text-align: justify;
     justify-content: space-between;
     align-items: center; /* Garante que o conteúdo esteja alinhado verticalmente */
     margin: 50px auto;
     padding: 20px;
-    max-width: 900px;
+    max-width: 1300px;
     z-index: 1;
 }
 
 .texto {
-    width: 45%; /* O texto ocupa 45% da largura */
-    text-align: left;
+    width: 55%; /* O texto ocupa 45% da largura */
 }
+
 .texto h2 {
     font-size: 2em;
     margin-bottom: 20px;
@@ -128,18 +129,37 @@ canvas {
 .texto p {
     font-size: 1.2em;
     line-height: 1.5;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .foto {
-    width: 45%; /* A imagem ocupa 45% da largura */
-    text-align: right;
+    width: 75%; /* Aumenta a largura da div para 60% */
+    text-align: center;
+    margin-left: auto; /* Centraliza a div à direita */
+    margin-right: 0;
+    position: relative; /* Necessário para posicionamento absoluto das imagens */
+    height: 400px; /* Define uma altura fixa para a div */
+    display: flex; /* Usa flexbox para facilitar o alinhamento */
+    justify-content: center; /* Alinha horizontalmente ao centro */
+    align-items: center; /* Alinha verticalmente ao centro */
 }
 
 .foto img {
     width: 100%;
-    max-width: 400px;
+    max-width: 500px; /* Aumenta o tamanho máximo da imagem */
     border-radius: 10px;
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente a imagem */
+    left: 50%; /* Centraliza horizontalmente a imagem */
+    transform: translate(-50%, -50%); /* Garante que o ponto de origem da imagem seja o centro */
+    opacity: 0; 
+    transition: opacity 1s ease-in-out;
 }
+
+.foto img.active {
+    opacity: 1; /* A imagem ativa será exibida */
+}
+
 
 .container {
     position: relative;
@@ -170,7 +190,7 @@ canvas {
     justify-content: center;
     align-items: center;
     font-size: 26px; /* Tamanho da fonte */
-    color: rgb(0, 0, 0); /* Cor do texto */
+    color: rgb(255, 255, 255); /* Cor do texto */
     border-radius: 8px; /* Bordas arredondadas */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra do card */
     transition: none; /* Remove transições ao passar o mouse */
@@ -180,7 +200,6 @@ canvas {
     background-color: #a1ff27; /* Mantém a cor original ao passar o mouse */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Pode adicionar uma sombra maior se desejar */
 }
-
 
 .content-bottom {
     background-color: black;
@@ -236,5 +255,3 @@ canvas {
     outline: none; 
     border: none; 
 }
-
-
