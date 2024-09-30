@@ -72,6 +72,16 @@ a:hover {
     color: #000000; 
 }
 
+#three-container {
+    height: 100%; /* Ajuste conforme necessário */
+    background-color: #eee; /* Placeholder para o fundo 3D */
+    position: absolute; /* Para ficar atrás das cartas */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0; /* Fundo 3D */
+}
+
 .card-container-creations {
     display: flex;
     justify-content: center;
@@ -84,21 +94,11 @@ a:hover {
     margin-bottom: 0; /* Removido para garantir que a área preta não tenha margem */
 }
 
-#three-container {
-    height: 800px; /* Ajuste conforme necessário */
-    background-color: #eee; /* Placeholder para o fundo 3D */
-    position: absolute; /* Para ficar atrás das cartas */
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 0; /* Fundo 3D */
-}
-
 .card {
-    width: 240px;
-    height: 400px;
+    width: 300px; /* Aumentei a largura para 300px */
+    height: 400px; /* Mantive a altura em 400px */
     perspective: 1000px;
-    margin: 20px 0; /* Margem apenas em cima e embaixo */
+    margin: 20px; /* Mantive margem em todos os lados */
 }
 
 .card-inner {
@@ -126,7 +126,7 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
+    background-color: rgba(247, 240, 240, 0.8); /* Fundo semi-transparente */
 }
 
 .card-back {
@@ -173,6 +173,16 @@ a:hover {
 .card-icon {
     font-size: 80px; /* Ajuste o tamanho conforme necessário */
 }
+
+/* Adicionando estilo ao container das cartas */
+.card-container-creations {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as cartas se ajustem na linha */
+    justify-content: space-between; /* Espaçamento entre as cartas */
+    margin: 0 auto; /* Centraliza o container */
+    max-width: 1200px; /* Limita a largura máxima do container */
+}
+
 
 .content-bottom-creations {
     background-color: black;
@@ -234,11 +244,25 @@ a:hover {
     background: none;
     font-size: 24px;
 }
+
+.video-background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Faz o vídeo ficar atrás do conteúdo */
+    transform: translate(-50%, -50%);
+}
+
 .magazine-title {
     display: flex;
     justify-content: left;
     gap: 5px; /* Espaço entre as letras */
     margin-top: 120px;
+    margin-bottom: 20px;
 }
 
 .letter {
@@ -307,4 +331,7 @@ a:hover {
     transform: rotate(-15deg) scale(1.2);
 }
 
+.concept{
+    color: white;
+}
 
