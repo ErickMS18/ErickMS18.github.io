@@ -71,11 +71,11 @@ var modalImages = {
     ],
     2: [
         "../media/ci1.jpg",
-        "../media/cc2.jpg",
+        "../media/cc2.JPG",
         "../media/ci3.jpg",
         "../media/ci4.jpg",
         "../media/ci5.png",
-        "../media/ci6.jpg"
+        "../media/ci6.JPG"
     ],
     3: [
         "../media/atacama.jpg",
